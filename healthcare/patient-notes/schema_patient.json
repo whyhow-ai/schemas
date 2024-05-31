@@ -1,0 +1,54 @@
+{
+    "entities": [
+      {
+        "name": "patient",
+        "description": "Patient"
+      },
+      {
+        "name": "treatment_medication",
+        "description": "A medical treatment or procedure or medication the patient has received."
+      },
+      {
+        "name": "pain_relief_outcome",
+        "description": "The outcome of patient pain relief after a medical treatment or procedure. For example, pain relief was achieved, improvements in functionality, or a certain percentage of pain relief was achieved."
+      },
+      {
+        "name": "plan",
+        "description": "Future medical treatments or procedures planned for the patient."
+      }
+    ],
+    "relations": [
+      {
+        "name": "has_treatment",
+        "description": "Indicates that a patient has received a specific treatment."
+      },
+      {
+        "name": "has_outcome",
+        "description": "Indicates the outcome of a specific treatment for the patient."
+      },
+      {
+        "name": "has_plan",
+        "description": "Indicates a future treatment or plan for the patient."
+      }
+    ],
+    "patterns": [
+      {
+        "head": "patient",
+        "relation": "has_treatment",
+        "tail": "treatment_medication",
+        "description": "A patient has received a specific treatment or medication."
+      },
+      {
+        "head": "treatment_medication",
+        "relation": "has_outcome",
+        "tail": "pain_relief_outcome",
+        "description": "A treatment has resulted in a specific outcome. For e.g. pain relief"
+      },
+      {
+        "head": "patient",
+        "relation": "has_plan",
+        "tail": "plan",
+        "description": "A patient has a future treatment or plan."
+      }
+    ]
+  }

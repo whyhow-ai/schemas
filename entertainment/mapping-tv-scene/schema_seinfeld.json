@@ -1,0 +1,64 @@
+{
+  "entities": [
+    {
+      "name": "character",
+      "description": "A person appearing in the sitcom, e.g., Jerry, Elaine, George, Kramer."
+    },
+    {
+      "name": "clothing",
+      "description": "Items of clothing that characters wear, e.g., puffy shirt, suede jacket."
+    },
+    {
+      "name": "food",
+      "description": "Food items that characters consume, e.g., cereal, black and white cookie, soup."
+    },
+    {
+      "name": "object",
+      "description": "An inanimate item that may be used or interacted with by characters, e.g., a couch, a car, a coffee table."
+    }
+  ],
+  "relations": [
+    {
+      "name": "wears",
+      "description": "Indicates that a character is wearing a particular item of clothing."
+    },
+    {
+      "name": "friends with",
+      "description": "Denotes a friendly relationship between characters."
+    },
+    {
+      "name": "eats",
+      "description": "Describes a character consuming a specific food item."
+    },
+    {
+      "name": "interacts with",
+      "description": "Describes a scenario in which one character engages with another character or an object, whether through conversation, use, or conflict."
+    }
+  ],
+  "patterns": [
+    {
+      "head": "character",
+      "relation": "wears",
+      "tail": "clothing",
+      "description": "A character wearing a specific item of clothing, e.g., Jerry wears the puffy shirt."
+    },
+    {
+      "head": "character",
+      "relation": "friends with",
+      "tail": "character",
+      "description": "One character is friends with another, e.g., Jerry is friends with George."
+    },
+    {
+      "head": "character",
+      "relation": "eats",
+      "tail": "food",
+      "description": "A character eating a specific food item, e.g., Kramer eats a black and white cookie."
+    },
+    {
+      "head": "character",
+      "relation": "interacts with",
+      "tail": "object",
+      "description": "A character interacting with an object, e.g., Elaine interacts with the coffee table."
+    }
+  ]
+}

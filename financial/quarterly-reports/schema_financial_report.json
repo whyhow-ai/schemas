@@ -1,0 +1,91 @@
+
+{
+    "entities": [
+      {
+        "name": "Financial Metric",
+        "description": "Key financial indicators such as revenue, gross margin."
+      },
+      {
+        "name": "Product",
+        "description": "Products like iPhone, Mac."
+      },
+      {
+        "name": "Service",
+        "description": "Services like Apple TV+, Apple Music."
+      },
+      {
+        "name": "Geographic Segment",
+        "description": "Regions like Americas, Europe."
+      },
+      {
+        "name": "Executive",
+        "description": "Company executives like CEO, CFO."
+      },
+      {
+        "name": "Market Condition",
+        "description": "External conditions impacting business."
+      },
+      {
+        "name": "Time Period",
+        "description": "Specific fiscal quarters or years."
+      },
+      {
+        "name": "Event",
+        "description": "Events affecting the company like product launches, COVID-19."
+      }
+    ],
+    "relations": [
+      {
+        "name": "Reports",
+        "description": "An executive reports on a financial metric."
+      },
+      {
+        "name": "Impacts",
+        "description": "Conditions or events that impact metrics or sales."
+      },
+      {
+        "name": "Participates In",
+        "description": "A geographic segment participates in financial results."
+      },
+      {
+        "name": "Presents",
+        "description": "A product or service is presented with associated financial metrics."
+      },
+      {
+        "name": "Occurs During",
+        "description": "An event occurs during a specific time period."
+      }
+    ],
+    "patterns": [
+      {
+        "head": "Executive",
+        "relation": "Reports",
+        "tail": "Financial Metric",
+        "description": "An executive reports on a financial metric."
+      },
+      {
+        "head": "Event",
+        "relation": "Impacts",
+        "tail": "Financial Metric",
+        "description": "An event impacts a financial metric."
+      },
+      {
+        "head": "Product",
+        "relation": "Presents",
+        "tail": "Financial Metric",
+        "description": "A product is associated with specific financial metrics during a presentation."
+      },
+      {
+        "head": "Geographic Segment",
+        "relation": "Participates In",
+        "tail": "Financial Metric",
+        "description": "A geographic segment contributes to financial results."
+      },
+      {
+        "head": "Market Condition",
+        "relation": "Impacts",
+        "tail": "Product",
+        "description": "Market conditions impact the sales or production of a product."
+      }
+    ]
+  }

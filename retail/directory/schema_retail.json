@@ -1,0 +1,82 @@
+{
+  "entities": [
+    {
+      "name": "restaurant",
+      "description": "The name of a restaurant. For example, John's Steakhouse, or Mary's Ice Cream, or Chipotle"
+    },
+    {
+      "name": "description",
+      "description": "A description of the restaurant. For example, John's Steakhouse is a high-end American steakhouse."
+    },
+    {
+      "name": "dish",
+      "description": "The food that is served at the restaurant. For example, coffee, steak, sandwiches, ice cream, etc."
+    },
+    {
+      "name": "hours",
+      "description": "The operating days and hours for lunch, dinner, and brunch. For example, For example, Dinner Monday: 9am to 6pm,Tuesday-Thursday: 8am to 9:00pm, Brunch Sundays 11am-3pm"
+    },
+    {
+      "name": "directions",
+      "description": "Navigation instructions for getting to the restaurant. For example, 'go right when you leave, then turn right at the second intersection. The first shop on your right-hand side.'"
+    },
+    {
+      "name": "size",
+      "description": "Is this restaurant good for small groups or large groups of people?"
+    }
+  ],
+  "relations": [
+    {
+      "name": "has_description",
+      "description": "Indicates a restaurant has a description."
+    },
+    {
+      "name": "serves",
+      "description": "Indicates a restaurant serves a type of food to their customers."
+    },
+    {
+      "name": "open_at",
+      "description": "Indicates a restaurant is open on certain days and times."
+    },
+    {
+      "name": "has_directions",
+      "description": "Indicates navigation instructions for getting to a restaurant."
+    },
+    {
+      "name": "accomodates",
+      "description": "Indicates the size of the group a restaurant can accomodate."
+    }
+  ],
+  "patterns": [
+    {
+      "head": "restaurant",
+      "relation": "has_description",
+      "tail": "description",
+      "description": "A restaurant has a decription."
+    },
+    {
+      "head": "restaurant",
+      "relation": "serves",
+      "tail": "dish",
+      "description": "A restaurant serves a type of food."
+    },
+    {
+      "head": "restaurant",
+      "relation": "open_at",
+      "tail": "hours",
+      "description": "A restaurant is open on certain days and times."
+    },
+    {
+      "head": "restaurant",
+      "relation": "has_directions",
+      "tail": "directions",
+      "description": "A restaurant has directions."
+    },
+    {
+      "head": "restaurant",
+      "relation": "accomodates",
+      "tail": "size",
+      "description": "A restaurant can accomodate small or large groups."
+    }
+  ]
+}

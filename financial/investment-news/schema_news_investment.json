@@ -1,0 +1,70 @@
+{
+  "entities": [
+    {
+      "name": "person",
+      "description": "A person involved in AI development or investment. This is a person's name, not a company. Example: Zhan, Andrew Ng."
+    },
+    {
+      "name": "company",
+      "description": "A company involved in AI. Examples: Google, Harvey, Sequoia."
+    },
+    {
+      "name": "technology",
+      "description": "A platform, tool, or other specific application of AI technology. Examples: Google Brain, OpenAI, LLaMA."
+    }
+  ],
+  "relations": [
+    {
+      "name": "advised_by",
+      "description": "Indicates that a person was advised or mentored by another person in a professional or academic setting."
+    },
+    {
+      "name": "works_at",
+      "description": "Indicates that a person works at a company."
+    },
+    {
+      "name": "founded",
+      "description": "Indicates that a person founded a company."
+    },
+    {
+      "name": "invested_in",
+      "description": "Indicates that a company made an investment in another company."
+    },
+    {
+      "name": "focuses_on",
+      "description": "Indicates that a company has a specialty in a specific technology."
+    }
+  ],
+  "patterns": [
+    {
+      "head": "person",
+      "relation": "advised_by",
+      "tail": "person",
+      "description": "A person was advised by another person."
+    },
+    {
+      "head": "person",
+      "relation": "works_at",
+      "tail": "company",
+      "description": "A person works at a company."
+    },
+    {
+      "head": "person",
+      "relation": "founded",
+      "tail": "company",
+      "description": "A person founded an organization."
+    },
+    {
+      "head": "company",
+      "relation": "invested_in",
+      "tail": "company",
+      "description": "A fund invested in a company."
+    },
+    {
+      "head": "company",
+      "relation": "focuses_on",
+      "tail": "technology",
+      "description": "A company focuses on a specific technology."
+    }
+  ]
+}

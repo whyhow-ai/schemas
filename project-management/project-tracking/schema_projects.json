@@ -1,0 +1,90 @@
+{
+  "entities": [
+    {
+      "name": "project",
+      "description": "A project with associated tasks."
+    },
+    {
+      "name": "task",
+      "description": "A task within a project."
+    },
+    {
+      "name": "description",
+      "description": "A brief description of the project or task."
+    },
+    {
+      "name": "people",
+      "description": "People who are working on this issue"
+    },
+    {
+      "name": "product",
+      "description": "Products related to the Project"
+    },
+    {
+      "name": "status",
+      "description": "The status of the Project"
+    },
+    {
+      "name": "issue",
+      "description": "The issues of the Project"
+    }
+  ],
+  "relations": [
+    {
+      "name": "part_of",
+      "description": "Describes the relationship between a task and the project it belongs to."
+    },
+    {
+      "name": "has_description",
+      "description": "Describes the description of a task or project."
+    },
+    {
+      "name": "resolution_team",
+      "description": "People who are part of the team working on this task"
+    }
+  ],
+  "patterns": [
+    {
+      "head": "task",
+      "relation": "part_of",
+      "tail": "project",
+      "description": "A task is part of a project, e.g., 'Task A' is part of 'Project X'."
+    },
+    {
+      "head": "task",
+      "relation": "has_description",
+      "tail": "description",
+      "description": "A task has a specific description, e.g., 'Task A has a description outlining the task details'."
+    },
+    {
+      "head": "issue",
+      "relation": "resolution_team",
+      "tail": "people",
+      "description": "This task have the following people working on this task."
+    },
+    {
+      "head": "product",
+      "relation": "part_of",
+      "tail": "project",
+      "description": "A product is part of a project, e.g., 'Router' is part of 'Project X'."
+    },
+    {
+      "head": "status",
+      "relation": "part_of",
+      "tail": "issue",
+      "description": "The status of a task, e.g. the status is In Progress."
+    },
+    {
+      "head": "description",
+      "relation": "part_of",
+      "tail": "issue",
+      "description": "The description of an issue."
+    },
+    {
+      "head": "status",
+      "relation": "part_of",
+      "tail": "task",
+      "description": "The status of a task, e.g. the status is In Progress."
+    }
+  ]
+}

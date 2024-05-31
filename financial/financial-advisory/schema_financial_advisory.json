@@ -1,0 +1,120 @@
+{
+  "entities": [
+    {
+      "name": "client",
+      "description": "An individual or couple receiving financial planning services, including details about their personal and financial information."
+    },
+    {
+      "name": "employment",
+      "description": "The client's employment status and source of income, such as self-employed, employed, or retired."
+    },
+    {
+      "name": "family",
+      "description": "Details about the client's family members, including spouse and children."
+    },
+    {
+      "name": "account",
+      "description": "Various types of financial accounts owned by the client, such as retirement accounts (e.g., 401(k), IRA), investment accounts, savings accounts, and insurance policies."
+    },
+    {
+      "name": "asset",
+      "description": "Other assets owned by the client, such as real estate properties, businesses, or valuable possessions."
+    },
+    {
+      "name": "goal",
+      "description": "The client's short-term and long-term financial goals, such as retirement planning, education funding, charitable giving, or generating passive income."
+    },
+    {
+      "name": "advisor",
+      "description": "The financial advisor or firm providing services to the client, including their recommendations and action items."
+    },
+    {
+      "name": "interest",
+      "description": "The client's personal interests or preferences, such as sports, hobbies, or activities."
+    }
+  ],
+  "relations": [
+    {
+      "name": "has_employment",
+      "description": "Indicates the client's employment status and source of income."
+    },
+    {
+      "name": "has_family",
+      "description": "Indicates the client's family members, including spouse and children."
+    },
+    {
+      "name": "owns",
+      "description": "Indicates that the client owns a particular financial account or asset."
+    },
+    {
+      "name": "has_goal",
+      "description": "Indicates that the client has a specific financial goal."
+    },
+    {
+      "name": "discussed",
+      "description": "Indicates that a particular topic or item was discussed during a meeting between the client and advisor."
+    },
+    {
+      "name": "advises",
+      "description": "Indicates that the advisor is providing financial planning services to the client."
+    },
+    {
+      "name": "recommended",
+      "description": "Indicates that the advisor recommended a specific action or strategy to the client."
+    },
+    {
+      "name": "has_interest",
+      "description": "Indicates the client's personal interests or preferences."
+    }
+  ],
+  "patterns": [
+    {
+      "head": "client",
+      "relation": "has_employment",
+      "tail": "employment",
+      "description": "The client's employment status and source of income."
+    },
+    {
+      "head": "client",
+      "relation": "has_family",
+      "tail": "family",
+      "description": "The client's family members, including spouse and children."
+    },
+    {
+      "head": "client",
+      "relation": "owns",
+      "tail": "account",
+      "description": "The client owns a particular financial account, such as a retirement account, investment account, or insurance policy."
+    },
+    {
+      "head": "client",
+      "relation": "owns",
+      "tail": "asset",
+      "description": "The client owns a particular asset, such as real estate property or a business."
+    },
+    {
+      "head": "client",
+      "relation": "has_goal",
+      "tail": "goal",
+      "description": "The client has a specific financial goal they are working towards."
+    },
+    {
+      "head": "advisor",
+      "relation": "recommended",
+      "tail": "account",
+      "description": "The advisor recommended a specific action or strategy related to a financial account."
+    },
+    {
+      "head": "advisor",
+      "relation": "recommended",
+      "tail": "asset",
+      "description": "The advisor recommended a specific action or strategy related to an asset."
+    },
+    {
+      "head": "client",
+      "relation": "has_interest",
+      "tail": "interest",
+      "description": "The client has a particular personal interest or preference."
+    }
+  ]
+}

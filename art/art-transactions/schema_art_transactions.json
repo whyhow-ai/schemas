@@ -1,0 +1,210 @@
+{
+  "entities": [
+    {
+      "name": "actor",
+      "description": "A PERSON who plays a role in the cultural heritage or art crime domain. Actors ARE ALWAYS referred by their Forename Surname, e.g, 'Doe' becomes 'John Doe'. ALL PERSONS ARE ACTORS FIRST AND FOREMOST."
+    },
+    {
+      "name": "collection",
+      "description": "A named collection of antiquities. Collections ARE ALWAYS referred to by their formal name."
+    },
+    {
+      "name": "policy",
+      "description": "A government or organizational scheme to set a framework around aspects of the art or cultural heritage domain."
+    },
+    {
+      "name": "place",
+      "description": "A geographic locale where an event occurs or an object comes from or an organization etc is located."
+    },
+    {
+      "name": "artefact",
+      "description": "Objects and artworks that come from a particular culture and are bought, sold, donated, stolen, looted, traded, by dealers, museums, agencies, and other organizations."
+    },
+    {
+      "name": "organization",
+      "description": "Non-profits and other associations. Organizations ARE ALWAYS referred to with their full formal name, e.g, 'RCMP' becomes 'Royal Canadian Mounted Police'"
+    },
+    {
+      "name": "museum",
+      "description": "Institutions for the preservation, curation, and display of objects, museums ARE ALWAYS referred to with their full formal name, e.g., 'the MET' becomes 'The Metropolitan Museum of Art'."
+    },
+    {
+      "name": "government_agency",
+      "description": "Government agencies ARE ALWAYS referred to with their full formal name, eg, 'IRS' becomes 'Internal Revenue Service'."
+    },
+    {
+      "name": "business",
+      "description": "In this context they are enterprises for making money that are not auction houses or galleries. Businesses ARE ALWAYS referred to with their full formal name."
+    },
+    {
+      "name": "auction_house",
+      "description": "An organization or gallery that facilitates the sale of artefacts between dealers and between collectors and between dealers and collectors and museums. Organizations ARE ALWAYS referred to with their full formal names."
+    },
+    {
+      "name": "culture_group",
+      "description": "The people or cultural group to whom an artefact may be attributed, e.g., a 5th century kantharos comes from CLASSICAL GREECE."
+    },
+    {
+      "name": "place",
+      "description": "A location where some event occurred."
+    },
+    {
+      "name": "scholar",
+      "description": "A role subordinate to ACTOR, describing a PERSON who conducts academic or field research related to cultural heritage."
+    },
+    {
+      "name": "dealer",
+      "description": "A role subordinate to ACTOR or ORGANIZATION, describing a PERSON or ENTITY involved in the buying and selling of artefacts."
+    },
+    {
+      "name": "collector",
+      "description": "A role subordinate to ACTOR or ORGANIZATION, describing a PERSON or ENTITY that acquires artefacts for personal or institutional collections."
+    },
+    {
+      "name": "looter",
+      "description": "A role subordinate to ACTOR, describing a PERSON who illegally excavates or steals cultural heritage artefacts."
+    },
+    {
+      "name": "officer",
+      "description": "A role subordinate to ACTOR, describing a PERSON who enforces laws or regulations related to cultural heritage, such as police officers or customs agents, or holds a managerial role in a museum."
+    }
+  ],
+  "relations": [
+    {
+      "name": "is_the_owner_of",
+      "description": "Denotes a business relationship where an ACTOR controls, or is the legal owner of, a business, gallery, auction house, or other for-profit organization."
+    },
+    {
+      "name": "works_with",
+      "description": "Denotes a business relationship between ACTORS who are dealers, organizations, looters, or collectors."
+    },
+    {
+      "name": "works_for",
+      "description": "Describes an employment or contractual relationship between ACTORS who are dealers, organizations, businesses, museums, government agencies, looters, or collectors."
+    },
+    {
+      "name": "has_possession_of",
+      "description": "Describes a situation where a dealer, organization, collector, or auction house controls an artefact whether through ownership or other means."
+    },
+    {
+      "name": "purchases",
+      "description": "Describes a situation where a dealer, organization, collector, or auction house buys AN ARTEFACT. e.g., John Smith purchases the Elgin Vase."
+    },
+        {
+      "name": "buys_from",
+      "description": "Describes a situation where a dealer, organization, collector, or auction house buys an artefact from a NAMED ACTOR. e.g, John Smith bought from Jane Doe the Elgin Vase."
+    },
+    {
+      "name": "sells",
+      "description": "Describes a situation where a dealer, organization, collector, or auction house sells AN ARTEFACT. e.g. Jane Doe sells the Elgin Vase."
+    },
+    {  
+    "name": "makes_sale_to",
+     "description": "Describes a situation where a dealer, organization, collector, or auction house sells to a NAMED ACTOR or entity."
+    },
+    {
+      "name": "donates_to",
+      "description": "Describes a situation where a dealer, organization, collector, or auction house donates an artefact to another entity."
+    },
+    {
+      "name": "obtains_from",
+      "description": "Describes a situation where a dealer, organization, collector, or auction house obtains an artefact from another entity UNDER UNCLEAR CIRCUMSTANCES."
+    },
+    {
+      "name": "originates_from",
+      "description": "Describes a situation where the provenance of an artefact is attributed, e.g., a 5th century black-figure vase originates in classical Greece."
+    },
+    {
+  "name": "has_immediate_family_member",
+  "description": "Describes a direct familial relationship between two individuals, including relationships by blood (e.g., parent, child, sibling) and by legal commitments such as marriage (e.g., spouse). Excludes more distant blood relationships and informal relationships like common-law partnerships UNLESS that relationship is explicitly mentioned."
+},
+    {
+      "name": "legal_status_change",
+      "description": "An organization, business, person, or so on, has come to the attention of law enforcement as when e.g., a person is charged with theft, an organization is sanctioned, an arrest warrant is issued."
+    },
+    {
+      "name": "has_role",
+      "description": "Describes the role or roles an actor or organization can have, such as SCHOLAR, DEALER, COLLECTOR, LOOTER, or OFFICER."
+    }
+  ],
+  "patterns": [
+    {
+      "head": "actor",
+      "relation": "works_with",
+      "tail": "actor",
+      "description": "One dealer works with another, e.g., John Doe works with Jane Smith."
+    },
+    {
+      "head": "actor",
+      "relation": "has_immediate_family_member",
+      "tail": "actor",
+      "description": "One actor is married to another, or an actor is the child, parent, or other close relation of another."
+    },
+    {
+      "head": "actor",
+      "relation": "is_the_owner_of",
+      "tail": "business",
+      "description": "An actor runs a business, e.g., John Doe established Atlantis Antiquities in 1982."
+    },
+    {
+      "head": "actor",
+      "relation": "has_possession_of",
+      "tail": "artefact",
+      "description": "A collector controls access to an artefact, e.g., John Smith displays the Doe Krater in his home."
+    },
+    {
+      "head": "organization",
+      "relation": "has_possession_of",
+      "tail": "artefact",
+      "description": "An organization has an artefact in their possession, e.g., The Metropolitan Museum of Art has the Kylix in its collection."
+    },
+    {
+      "head": "artefact",
+      "relation": "comes_from",
+      "tail": "culture_group",
+      "description": "An artefact is an example of the material culture of a group."
+    },
+    {
+      "head": "auction_house",
+      "relation": "sells",
+      "tail": "artefact",
+      "description": "An auction house sells AN ARTEFACT, e.g., Sotheby's auctioned the Kylix on May 9th."
+    },
+    {
+      "head": "actor",
+      "relation": "purchases",
+      "tail": "artefact",
+      "description": "A collector purchases an artefact, e.g., John Smith (a COLLECTOR) bought the Kylix on May 9th at auction."
+    },
+     {
+      "head": "actor",
+      "relation": "buys_from",
+      "tail": "auction_house",
+      "description": "Describes a situation where a dealer, organization, collector, or auction house buys an artefact from a NAMED ACTOR. e.g, John Smith bought from Jane Doe the Elgin Vase."
+    },
+    {
+      "head": "actor",
+      "relation": "works_with",
+      "tail": "auction_house",
+      "description": "A person (a DEALER) consigns materials to be sold at auction by an auction house."
+    },
+    {
+      "head": "government_agency",
+      "relation": "legal_status_change",
+      "tail": "looter",
+      "description": "A government agency effects a change in legal status towards someone or something, e.,g, The police charged John Doe with theft under a thousand dollars for looting the antiquity."
+    },
+    {
+      "head": "actor",
+      "relation": "has_role",
+      "tail": "role",
+      "description": "An actor can have multiple roles such as SCHOLAR, DEALER, COLLECTOR, LOOTER, or OFFICER."
+    },
+    {
+      "head": "organization",
+      "relation": "has_role",
+      "tail": "role",
+      "description": "An organization can function in multiple roles relevant to cultural heritage crime."
+    }
+  ]
+}

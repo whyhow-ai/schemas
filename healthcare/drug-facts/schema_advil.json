@@ -1,0 +1,54 @@
+{
+  "entities": [
+    {
+      "name": "medication",
+      "description": "The brand name for the medication mentioned in the document. Examples of medication are Advil, Benadryl, etc. "
+    },
+    {
+      "name": "side_effect",
+      "description": "Harmful bodily effects that can be caused by using the medication. Examples of side effects are nausea, swelling, asthma, shock, blisters, rash, liver damage"
+    },
+    {
+      "name": "active_ingredient",
+      "description": "Chemical compounds and ingredients used to make a medication. Examples of active ingredients are Acetaminophen, Ibuprofen, NSAID, Diphenhydramine HCl"
+    },
+    {
+      "name": "symptom",
+      "description": "An ailment or issue that is treated or relieved by using the medication. Examples of symptoms are headache, soreness, pain, toothache, backache, arthritis"
+    }
+  ],
+  "relations": [
+    {
+      "name": "causes",
+      "description": "Indicates that the medication has an undesirable bodily side effect."
+    },
+    {
+      "name": "contains",
+      "description": "Medications contain an active ingredient."
+    },
+    {
+      "name": "treats",
+      "description": "Medications are used to treat bodily ailments or illnesses."
+    }
+  ],
+  "patterns": [
+    {
+      "head": "medication",
+      "relation": "causes",
+      "tail": "side_effect",
+      "description": "A medication causes a side effect, e.g., Advil causes nausea, Benadryl causes drowsiness, Tylenol causes stomach bleeding"
+    },
+    {
+      "head": "medication",
+      "relation": "contains",
+      "tail": "active_ingredient",
+      "description": "A medication contains an active ingredient, e.g., Advil contains Ibuprofen, Tylenol contains Acetaminophen"
+    },
+    {
+      "head": "medication",
+      "relation": "treats",
+      "tail": "symptom",
+      "description": "A medication treats a symptom, e.g., Advil treats toothaches, Tylenol treats backache"
+    }
+  ]
+}

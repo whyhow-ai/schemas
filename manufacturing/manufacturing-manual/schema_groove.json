@@ -1,0 +1,98 @@
+{
+  "entities": [
+    {
+      "name": "grease",
+      "description": "Indicates a type of grease"
+    },
+    {
+      "name": "Bearing_Design",
+      "description": "Different structural designs of SKF spherical roller bearings, including CC, CA, and E designs."
+    },
+    {
+      "name": "Bearing_Component",
+      "description": "Individual components of SKF spherical roller bearings, such as cages, inner rings, and guide rings."
+    },
+    {
+      "name": "material",
+      "description": "Indicates a type of material like sheet steel"
+    },
+    {
+      "name": "Technical_Specification",
+      "description": "Technical aspects of bearing components, including material types, dimensions, and design modifications like tapered bores."
+    }
+  ],
+  "relations": [
+    {
+      "name": "are_available_with",
+      "description": "Indicates that a specific bearing design are available with and has a specific feature."
+    },
+    {
+      "name": "are_supplied_with",
+      "description": "Indicates that a specific bearing are supplied with and comes in a specific way."
+    },
+    {
+      "name": "are_fitted_with",
+      "description": "Indicates that a specific bearing comes with a specific feature."
+    },
+    {
+      "name": "is_made_of",
+      "description": "Indicates the material that a specific bearing is made of."
+    },
+    {
+      "name": "fitted_in",
+      "description": "Indicates that a specific bearing is positioned in a specific way."
+    },
+    {
+      "name": "fixed_by",
+      "description": "Indicates that a specific bearing is positioned in a specific way."
+    },
+    {
+      "name": "filled_with",
+      "description": "Indicates that a specific bearing is filled with a specific grease"
+    }
+  ],
+  "patterns": [
+    {
+      "head": "Bearing_Design",
+      "relation": "are_available_with",
+      "tail": "Bearing_Component",
+      "description": "A bearing design ensures specific performance characteristics like optimal load distribution or effective roller guidance."
+    },
+    {
+      "head": "Bearing_Design",
+      "relation": "are_supplied_with",
+      "tail": "Bearing_Component",
+      "description": "A specific bearing design includes various components such as cages and rings."
+    },
+    {
+      "head": "Bearing_Design",
+      "relation": "are_fitted_with",
+      "tail": "Bearing_Component",
+      "description": "A specific bearing design includes various components such as cages and rings."
+    },
+    {
+      "head": "Bearing_Design",
+      "relation": "is_made_of",
+      "tail": "material",
+      "description": "A bearing is made of a specific material."
+    },
+    {
+      "head": "Bearing_Design",
+      "relation": "fitted_in",
+      "tail": "Technical_Specification",
+      "description": "A bearing is fitted in a particular way."
+    },
+    {
+      "head": "Bearing_Design",
+      "relation": "fixed_by",
+      "tail": "Technical_Specification",
+      "description": "A bearing is fixed by another object or feature."
+    },
+    {
+      "head": "Bearing_Design",
+      "relation": "is_filled_with",
+      "tail": "grease",
+      "description": "A bearing is filled with a type of grease."
+    }
+  ]
+}

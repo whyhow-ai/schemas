@@ -1,0 +1,89 @@
+{
+  "entities": [
+    {
+      "name": "Person",
+      "description": "This is the name of a human being and a candidate who is applying with their resume."
+    },
+    {
+      "name": "Email Address",
+      "description": "The email of the person (i.e. bob@gmail.com). There is only one email address per person"
+    },
+    {
+      "name": "Mobile Number",
+      "description": "The mobile number of the person. There is only one mobile number per person"
+    },
+    {
+      "name": "Country",
+      "description": "The country part of the person's residential address (i.e. Brazil).There is only one country per person"
+    },
+    {
+      "name": "Job Position",
+      "description": "The title of a job position stated in the resume. For example, Product Manager, Accounts Manager"
+    },
+    {
+      "name": "Year",
+      "description": "The years in which a job position was held from. The years must be a range of numbers, and not words. For example, 1991-1993"
+    },
+    {
+      "name": "Company",
+      "description": "The Company that the person worked for"
+    } 
+  ],
+  "relations": [
+
+    {
+      "name": "has",
+      "description": "Indicates that a specific piece of information is related to this Person."
+    },
+    {
+      "name": "lives_in",
+      "description": "Indicates that the Person lives in a specific country"
+    },
+    {
+      "name": "worked_in",
+      "description": "Indicates where the Company that the person worked in."
+    },
+    {
+      "name": "within",
+      "description": "Indicates the Job Position within the Company"
+    }
+  ],
+  "patterns": [
+    {
+      "head": "Person",
+      "relation": "has",
+      "tail": "Email Address",
+      "description": "A person has an email address (i.e. bob@gmail.com).There is only one email address per person."
+    },
+    {
+      "head": "Person",
+      "relation": "has",
+      "tail": "Mobile Number",
+      "description": "A person has a phone number (i.e. + 1 124213 1232).There is only one number per person"
+    },
+    {
+      "head": "Person",
+      "relation": "lives_in",
+      "tail": "Country",
+      "description": "A person lives in a country (i.e. Brazil).There is only one country per person."
+    },
+    {
+      "head": "Person",
+      "relation": "worked_in",
+      "tail": "Company",
+      "description": "A person worked in Cisco"
+    },
+    {
+      "head": "Job Position",
+      "relation": "within",
+      "tail": "Company",
+      "description": "Product Manager job within Cisco"
+    },
+    {
+      "head": "Job Position",
+      "relation": "has",
+      "tail": "Year",
+      "description": "A person held a job of a Project Manager from 1991 - 1993."
+    }
+  ]
+}
