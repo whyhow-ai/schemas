@@ -8,6 +8,8 @@ Some of these schemas were created by the WhyHow team, with certain aspects of t
 
 ## How does it work?
 
+These schemas work best with the WhyHow.AI SDK given the very specific multi-agentic approach that is on the backend to use natural language schemas with descriptions as the basis for graph creation.
+
 We aren't just throwing a schema at an LLM and telling it to build us a graph. While that approach is a relevant (and admittedly fun) way to explore your data through LLM-reasoned patterns, it lacks the precise control and domain specificity needed to reliably perform entity and relationship extraction and build graphs in a repeatable way. Entity resolution and coreference resolution also remain difficult, especially when building with a corpus of larger documents.
 
 Our schema-based extraction solution take a multi agent approach and employs task-specific language models throughout multiple stages (such as entity definition and extraction, relevancy checks, relationship detection, pattern alignment, etc.) to build more reliable and comprehensive extraction. Our modular approach enables users to inject meaningful context and swap in domain-specific models at the right stage of extraaction to enable more customized, reliable extraction that maps to your unique use case.
