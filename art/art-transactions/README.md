@@ -12,3 +12,6 @@ This schema can answer queries such as:
 - Who owns a particular artifact?
 - Which artifacts are involved in a legal dispute?
 - What are the connections between dealers, looters, and auction houses?
+
+## Acknowledgements
+Thanks to Shawn Graham (https://github.com/shawngraham) for the development of this Schema!
