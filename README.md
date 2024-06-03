@@ -71,19 +71,6 @@ For each type, you must provide specific metadata, such as a name, description, 
 }
 ```
 
-### Schema Development Process
-
-As part of the schema-defined graph creation feature, our Schema Library lets you get started experimenting faster.
-
-In general, we see the following process when design partners come to us specifically for schema generation help:
-
-- Read our Medium articles, case studies, and now Schema Library and come with an understanding of the specific use-case and data set you want graphs for
-- Use the Question-Defined Graph Creation feature to generate a list of potential schemas that would be a fit
-- Use an LLM to generate the schema based on a few high-level schemas and objectives
-- Edit the final output json schema with our schema-defined graph creation feature and create the graph immediately in Whyhow.AI’s SDK.
-
-These steps are not necessary and relevant in all scenarios, and depend very much on the use-case, specific data, how familiar and specific you want to be with your graph. At the end of the day, granular tooling for experimenting, iteration and management is what is needed for incorporating more deterministic graph structures, and it will be exciting to see more systems incorporate knowledge graphs.
-
 ## Example
 
 Let's say you're a pharmaceutical company building a RAG solution for a chatbot that allows users to more easily and naturally explore the treatments, side effects, and other critical information about medications you provide provide. You have a large database of drug fact documents in PDF format, and they you to use them to construct a medication knowledge graph to answer questions such as:
