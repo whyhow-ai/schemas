@@ -1,0 +1,122 @@
+{
+  "entities": [
+    {
+      "name": "CorporateStructure",
+      "description": "Amazon's overall corporate organization and governance",
+      "fields": []
+    },
+    {
+      "name": "BusinessSegments",
+      "description": "Major operational divisions of Amazon",
+      "fields": []
+    },
+    {
+      "name": "ProductsAndServices",
+      "description": "Key offerings provided by Amazon",
+      "fields": []
+    },
+    {
+      "name": "RevenueStreams",
+      "description": "Sources of income for Amazon",
+      "fields": []
+    },
+    {
+      "name": "OperationalInfrastructure",
+      "description": "Key systems and networks supporting Amazon's operations",
+      "fields": []
+    },
+    {
+      "name": "StrategicPartnerships",
+      "description": "Important business relationships and collaborations",
+      "fields": []
+    },
+    {
+      "name": "RiskFactors",
+      "description": "Potential threats and challenges to Amazon's business",
+      "fields": []
+    },
+    {
+      "name": "FinancialPerformance",
+      "description": "Key financial metrics and results",
+      "fields": []
+    },
+    {
+      "name": "MarketPosition",
+      "description": "Amazon's standing in various markets and industries",
+      "fields": []
+    },
+    {
+      "name": "FutureOutlook",
+      "description": "Projections and strategic directions for Amazon",
+      "fields": []
+    }
+  ],
+  "relations": [
+    {
+      "name": "comprises",
+      "description": "Indicates components or subdivisions of an entity"
+    },
+    {
+      "name": "contributes_to",
+      "description": "Indicates a positive impact or contribution"
+    },
+    {
+      "name": "depends_on",
+      "description": "Indicates a critical reliance or dependency"
+    },
+    {
+      "name": "influences",
+      "description": "Indicates a significant effect or impact"
+    },
+    {
+      "name": "competes_with",
+      "description": "Indicates competitive relationships"
+    },
+    {
+      "name": "mitigates",
+      "description": "Indicates strategies to address challenges or risks"
+    },
+    {
+      "name": "drives",
+      "description": "Indicates key factors behind growth or performance"
+    }
+  ],
+  "patterns": [
+    {
+      "head": "CorporateStructure",
+      "relation": "comprises",
+      "tail": "BusinessSegments",
+      "description": "Amazon's corporate structure includes various business segments"
+    },
+    {
+      "head": "BusinessSegments",
+      "relation": "contributes_to",
+      "tail": "RevenueStreams",
+      "description": "Each business segment contributes to Amazon's revenue streams"
+    },
+    {
+      "head": "ProductsAndServices",
+      "relation": "depends_on",
+      "tail": "OperationalInfrastructure",
+      "description": "Amazon's products and services rely on its operational infrastructure"
+    },
+    {
+      "head": "StrategicPartnerships",
+      "relation": "influences",
+      "tail": "MarketPosition",
+      "description": "Strategic partnerships affect Amazon's market position"
+    },
+    {
+      "head": "RiskFactors",
+      "relation": "influences",
+      "tail": "FutureOutlook",
+      "description": "Identified risk factors impact Amazon's future outlook"
+    },
+    {
+      "head": "FinancialPerformance",
+      "relation": "drives",
+      "tail": "FutureOutlook",
+      "description": "Financial performance drives Amazon's future strategies and projections"
+    }
+  ]
+}
