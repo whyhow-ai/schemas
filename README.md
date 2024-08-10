@@ -1,6 +1,6 @@
 # WhyHow Knowledge Graph Schemas
 
-Welcome to the repository for WhyHow Knowledge Graph Schemas. This repository contains a collection of predefined schemas that can be used with the WhyHow Platform (whyhow.ai) to facilitate the rapid development and deployment of knowledge graphs tailored to specific domains or applications.
+Welcome to the repository for WhyHow Knowledge Graph Schemas. This repository contains a collection of predefined schemas that can be used with the [WhyHow Platform]([url](https://www.whyhow.ai/)) to facilitate the rapid development and deployment of knowledge graphs tailored to specific domains or applications.
 
 WhyHow builds developer tools that simplify and streamline the process of building, managing, and integrating graphs into your RAG pipelines. We believe that graph-based RAG systems are most performant when using graphs that are small and narrowly-scoped to your unique view of the world. By including only the data that you need for your use case, you reduce the likelihood of poisoning your context window with potentially irrelevant information and causing hallucinations. Smaller graphs are also easier to maintain and modify, giving developers much more control to build accurate, reliable RAG systems.
 
